@@ -204,14 +204,13 @@
 </body>
 <script src="js/jquery-3.3.1.min.js"></script>
 <script>
-    $('#f_email').blur(function () {
+    $('#f_email').blur(function () { //离开邮箱输入框
         if(this.value == ""){
-            $('#email_tip').text('请输入email!');
+            $('#email_tip').text('请输入email!'); //没有输入邮箱提示
         }else{
             //user/check_email?email=lisi@163.com
             //回调函数
-            $.get('user/check_email', {email: this.value}, function(data){
-                // console.log(data);
+            $.get('user/check_email', {email: this.value}, function(data){ //输入邮箱发送后端
                 if(data == 'fail'){
                     $('#email_tip').text('该用户名已存在，换一个试试.');
                 }else{

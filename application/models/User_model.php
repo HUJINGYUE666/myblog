@@ -11,7 +11,7 @@ class User_model extends CI_Model {
         ))->row();
     }
 
-    public function get_by_email($email){
+    public function get_by_email($email){ //前端邮箱 数据库邮箱是否存在
         return $this->db->get_where('t_user', array('email'=>$email))->row();
     }
 
@@ -20,7 +20,7 @@ class User_model extends CI_Model {
         // values('$email', '$username', '$pwd', '$sex', '$province', '$city')";
 
 
-        $this->db->insert('t_user', array(
+        $this->db->insert('t_user', array( //向数据库传值
             'email'=>$email,
             'username'=>$username,
             'password'=>$pwd,
@@ -31,7 +31,4 @@ class User_model extends CI_Model {
 
         return $this->db->affected_rows();//返回当前操作影响的行数
     }
-
-
-
 }

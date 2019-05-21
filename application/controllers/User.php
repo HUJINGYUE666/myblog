@@ -52,7 +52,7 @@ class User extends CI_Controller {
 
         $this->load->model('user_model');
         $rows = $this->user_model->save_user($email,$username,$pwd,$sex,$province,$city);
-        if($rows == 1){
+        if($rows == 1){ //一行登录页面 不是一行注册页面
             redirect('user/login');
         }else{
             redirect('user/reg');
@@ -61,9 +61,9 @@ class User extends CI_Controller {
 
     public function check_email(){
         $email = $this->input->get('email');
-        $this->load->model('user_model');
+        $this->load->model('user_model'); //接收邮箱
         $row = $this->user_model->get_by_email($email);
-        if($row){
+        if($row){ //存在fail 不存在true
             echo 'fail';
         }else{
             echo 'success';
