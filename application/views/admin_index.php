@@ -6,6 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="Content-Language" content="zh-CN">
     <title>Johnny的博客 - 唯创个人博客</title>
+    <!--    基准路径-->
     <base href="<?php echo site_url();?>">
     <link rel="stylesheet" href="css/space2011.css" type="text/css" media="screen">
     <style type="text/css">
@@ -27,6 +28,7 @@
 <style>ul.tabnav {padding: 3px 10px 4px 10px;}</style>
 <![endif]-->
 <div id="OSC_Screen">
+    <!--包含admin_top.php文件-->
     <?php include 'admin_top.php';?>
     <div id="OSC_Content">
         <div id="AdminScreen">

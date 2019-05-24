@@ -6,6 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="Content-Language" content="zh-CN">
     <title>申请账号 - 唯创个人博客</title>
+<!--    基准路径-->
     <base href="<?php echo site_url();?>">
     <link rel="stylesheet" href="css/oschina2011.css" type="text/css" media="screen">
     <style type="text/css">
@@ -208,8 +209,8 @@
         if(this.value == ""){
             $('#email_tip').text('请输入email!'); //没有输入邮箱提示
         }else{
-            //user/check_email?email=lisi@163.com
-            //回调函数
+            //user/check_email?email=591711447@qq.com
+            //ajax 回调函数
             $.get('user/check_email', {email: this.value}, function(data){ //输入邮箱发送后端
                 if(data == 'fail'){
                     $('#email_tip').text('该用户名已存在，换一个试试.');
@@ -218,8 +219,6 @@
                 }
             });
         }
-
-
     });
 </script>
 </html>

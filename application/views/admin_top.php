@@ -1,12 +1,12 @@
 <?php
-//$user = $this->session->userdata('user');
-//if(!$user){//如果user取不到值，说明不是正常登录进来
-//    redirect('user/login');
-//}
-//?>
+$user = $this->session->userdata('user');
+if(!$user){//如果user取不到值，说明不是正常登录进来
+    redirect('user/login');
+}
+?>
 <!-- #BeginLibraryItem "/Library/OSC_Banner.lbi" -->
 <div id="OSC_Banner">
-    <div id="OSC_Slogon">Johnny's Blog</div>
+    <div id="OSC_Slogon"><?php echo $user->username;?>'s Blog</div>
     <div id="OSC_Channels">
         <ul>
             <li><a href="#" class="project">心情 here...</a></li>
@@ -17,7 +17,7 @@
 <div id="OSC_Topbar">
     <div id="VisitorInfo">
         当前访客身份：
-        [ <a href="user/logout">Johnny退出</a> ]
+        <?php echo $user->username;?> [ <a href="user/logout">退出</a> ]
         <span id="OSC_Notification">
 					<a href="#" class="msgbox" title="进入我的留言箱">你有<em>0</em>新留言</a>
 				</span>

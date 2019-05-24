@@ -6,6 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="Content-Language" content="zh-CN">
     <title>登录 - 唯创个人博客</title>
+    <!--    基准路径-->
     <base href="<?php echo site_url();?>">
     <link rel="stylesheet" href="css/oschina2011.css" type="text/css" media="screen">
     <style type="text/css">

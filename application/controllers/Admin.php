@@ -2,9 +2,8 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Admin extends CI_Controller {
-
     public function index(){
-        $this->load->view('admin_index');
+        $this->load->view('admin_index'); //访问博客页面
     }
 
     public function blog_type(){
@@ -13,7 +12,6 @@ class Admin extends CI_Controller {
 
         $this->load->model('blog_model');
         $results = $this->blog_model->get_by_userid($user->user_id);
-
 
         $this->load->view('blog_type', array('types'=>$results));
     }
